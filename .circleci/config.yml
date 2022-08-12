@@ -18,10 +18,10 @@ jobs:
       - run:
           name: Build and push to Docker Hub
           command: |
-            docker build -t charan:1 .
+            docker build -t charan .
             echo "Shanmukh@0410" | docker login -u "shanmukhsreerangam" --password-stdin
-            docker tag charan:1 shanmukhsreerangam/project:hari 
-            docker push shanmukhsreerangam/hari:latest
+            docker tag charan:latest shanmukhsreerangam/project:hari 
+            docker push shanmukhsreerangam/project:hari
   test:
     working_directory: ~/circleci-python
     docker:
