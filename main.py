@@ -1,5 +1,8 @@
-a=989
-b=12
-print(a+b)
-if(a+b >1990):
-    print("successful")
+def Add(a, b):
+        return a + b
+        
+def SayHello():
+        print("sup world from srcmake")
+
+if __name__ == '__main__':
+        SayHello()
