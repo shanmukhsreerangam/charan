@@ -25,4 +25,5 @@ jobs:
 
 workflows:
     jobs:
+      - build
       - shanmukh
