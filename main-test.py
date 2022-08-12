@@ -1,7 +1,7 @@
 from main import Add
 
 def TestAdd():
-        assert Add(2,3) == 8
+        assert Add(5,3) == 8
         print("Add Function works correctly")
 
 if __name__ == '__main__':
