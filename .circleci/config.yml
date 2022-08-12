@@ -1,13 +1,6 @@
 version: 2.1
 
 jobs:
-  build:
-    working_directory: ~/circleci-python
-    docker:
-      - image: "circleci/python:3.6.4"
-    steps:
-      - checkout
-      - run: python3 main.py
   shanmukh:
     docker:
       - image: cimg/base:2022.06
@@ -20,21 +13,9 @@ jobs:
           command: |
             docker build -t charan .
             echo "Shanmukh@0410" | docker login -u "shanmukhsreerangam" --password-stdin
-            docker tag charan:latest shanmukhsreerangam/project:shanmuk 
-            docker push shanmukhsreerangam/project:shanmuk
-  test:
-    working_directory: ~/circleci-python
-    docker:
-      - image: "circleci/python:3.6.4"
-    steps:
-      - checkout
-      - run: python3 main-test.py
+            docker tag charan:latest shanmukhsreerangam/project:shanmuk1
+            docker push shanmukhsreerangam/project:shanmuk1
 
 workflows:
-  build_and_test:
     jobs:
-      - build
-      - test:
-          requires:
-            - build
       - shanmukh
