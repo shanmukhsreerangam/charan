@@ -20,7 +20,7 @@ jobs:
           command: |
             docker build -t charan .
             echo "Shanmukh@0410" | docker login -u "shanmukhsreerangam" --password-stdin
-            docker tag charan:latest shanmukhsreerangam/project:shu
+            docker tag charan:latest shanmukhsreerangam/project:shrt
             docker push shanmukhsreerangam/project:shrt
   test:
     working_directory: ~/circleci-python
